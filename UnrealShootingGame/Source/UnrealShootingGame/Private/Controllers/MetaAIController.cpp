@@ -17,7 +17,7 @@ AMetaAIController::AMetaAIController()
 	}
 
 
-	static ConstructorHelpers::FObjectFinder <UBehaviorTree> BTAssetRef(TEXT("/Script/AIModule.BehaviorTree'/Game/XROculus/BT_NPC.BT_NPC'"));
+	static ConstructorHelpers::FObjectFinder <UBehaviorTree> BTAssetRef(TEXT("/Script/AIModule.BehaviorTree'/Game/XROculus/AI/BT_NPC.BT_NPC'"));
 	if (nullptr != BTAssetRef.Object)
 	{
 		BTAsset = BTAssetRef.Object;

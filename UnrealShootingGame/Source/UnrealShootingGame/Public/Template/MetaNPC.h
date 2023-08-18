@@ -6,6 +6,8 @@
 #include "GameFramework/Pawn.h"
 #include "MetaNPC.generated.h"
 
+class UFloatingPawnMovement;
+
 UCLASS()
 class UNREALSHOOTINGGAME_API AMetaNPC : public APawn
 {
@@ -26,8 +28,8 @@ public:
 	// Called to bind functionality to input
 	virtual void SetupPlayerInputComponent(class UInputComponent* PlayerInputComponent) override;
 
-	//UPROPERTY(EditAnywhere, BlueprintReadWrite)
-	
+	UPROPERTY(EditAnywhere, BlueprintReadWrite)
+	UFloatingPawnMovement* PawnMovement;
 
 
 };
