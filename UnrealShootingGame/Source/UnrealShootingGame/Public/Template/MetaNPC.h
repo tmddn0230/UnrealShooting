@@ -4,9 +4,12 @@
 
 #include "CoreMinimal.h"
 #include "GameFramework/Pawn.h"
+
 #include "MetaNPC.generated.h"
 
+
 class UFloatingPawnMovement;
+
 
 UCLASS()
 class UNREALSHOOTINGGAME_API AMetaNPC : public APawn
@@ -30,6 +33,5 @@ public:
 
 	UPROPERTY(EditAnywhere, BlueprintReadWrite)
 	UFloatingPawnMovement* PawnMovement;
-
 
 };

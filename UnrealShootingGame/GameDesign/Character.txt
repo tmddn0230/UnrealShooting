@@ -1,0 +1,11 @@
+Character is two type. 
+
+1. Use VR (Meta Quest 2)
+- UE 4 Character (Only Hands) 
+
+
+2. Non Use VR (OnePerson Game & Third Person Game)
+- UE 4 Character (Only Hands)
+- Change ThirdPerson View (Full Body)
+
+

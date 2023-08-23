@@ -33,6 +33,7 @@ void AMetaAIController::RunAI()
 	{
 		bool RunResult = RunBehaviorTree(BTAsset);
 		ensure(RunResult);
+
 	}
 }
 

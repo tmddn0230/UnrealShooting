@@ -4,16 +4,18 @@
 
 #include "Template/MetaNPC.h"
 #include "GameFramework/FloatingPawnMovement.h"
-
+#include "Controllers/MetaAIController.h"
 
 // Sets default values
 AMetaNPC::AMetaNPC()
 {
  	// Set this pawn to call Tick() every frame.  You can turn this off to improve performance if you don't need it.
 	PrimaryActorTick.bCanEverTick = true;
-
-
+    // Pawnmovement 가 있어야 Move To 등 BT 를 수행
 	PawnMovement = CreateDefaultSubobject<UFloatingPawnMovement>(TEXT("PawnMoveMentComponent"));
+
+	AIControllerClass = AMetaAIController::StaticClass();
+	AutoPossessAI = EAutoPossessAI::PlacedInWorldOrSpawned;
 }
 
 // Called when the game starts or when spawned
