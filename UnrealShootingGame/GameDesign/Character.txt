@@ -9,3 +9,22 @@ Character is two type.
 - Change ThirdPerson View (Full Body)
 
 
+// 
+C++ 코드로 하려면 핸드가 보이게 끔 B_MannequinXR 과 GrabComponent 씬 컴포넌트를 구현해 주어야 한다. 해당 부분은 추후에 작업하는것이 우선순위에 맞다 지금은 캐릭터에서 해당 블루프린트들만 잘 써도 바로 컨트롤러 사용이 가능하므로 인풋 매핑이 우선 순위가 될 것 같다.
+
+
+// Input 
+
+// GameMode
+
+Right Controller Only 
+
+Button A : Menu Open
+
+Button B : Select
+
+JoyPad Input : Move 
+
+Trigger Button : Water Shot
+
+// UI Mode
