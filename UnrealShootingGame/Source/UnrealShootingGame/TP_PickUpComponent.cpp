@@ -2,6 +2,7 @@
 
 #include "TP_PickUpComponent.h"
 
+
 UTP_PickUpComponent::UTP_PickUpComponent()
 {
 	// Setup the Sphere Collision

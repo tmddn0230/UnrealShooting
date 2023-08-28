@@ -10,6 +10,15 @@
 
 class UFloatingPawnMovement;
 
+UENUM(BlueprintType)
+enum class ENPCState : uint8
+{
+	None, 
+	Idle,       // 대기
+	Warning,    // 산소 마스크 On
+	Danger,     // 산소 마스트 x
+	Safe        // 탈출
+};
 
 UCLASS()
 class UNREALSHOOTINGGAME_API AMetaNPC : public APawn
