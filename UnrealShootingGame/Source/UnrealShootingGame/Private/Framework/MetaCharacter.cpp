@@ -17,6 +17,8 @@ void AMetaCharacter::BeginPlay()
 {
 	Super::BeginPlay();
 	
+	
+
 }
 
 // Called every frame

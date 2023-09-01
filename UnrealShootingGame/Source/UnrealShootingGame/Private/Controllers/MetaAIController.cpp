@@ -35,6 +35,23 @@ void AMetaAIController::RunAI()
 		ensure(RunResult);
 
 
+
+		FChangeStateDele deleidle;
+		deleidle.BindUObject(this, &AMetaAIController::SetNPCIdle);
+		DelegateMap.Add(EMetaNPCState::Idle, deleidle);
+
+		FChangeStateDele deleChase;
+		deleChase.BindUObject(this, &AMetaAIController::SetNPCChase);
+		DelegateMap.Add(EMetaNPCState::Chase, deleChase);
+
+		FChangeStateDele deleAttack;
+		deleAttack.BindUObject(this, &AMetaAIController::SetNPCAttack);
+		DelegateMap.Add(EMetaNPCState::Attack, deleAttack);
+
+		FChangeStateDele deleDie;
+		deleDie.BindUObject(this, &AMetaAIController::SetNPCDie);
+		DelegateMap.Add(EMetaNPCState::Die, deleDie);
+
 	}
 }
 
@@ -53,4 +70,27 @@ void AMetaAIController::OnPossess(APawn* InPawn)
 	Super::OnPossess(InPawn);
 
 	RunAI();
+}
+
+void AMetaAIController::SetNPCIdle()
+{
+}
+
+void AMetaAIController::SetNPCChase()
+{
+}
+
+void AMetaAIController::SetNPCAttack()
+{
+}
+
+void AMetaAIController::SetNPCDie()
+{
+}
+
+void AMetaAIController::ChangeState(EMetaNPCState state)
+{
+	NPCState = state;
+	DelegateMap.Find(state)->ExecuteIfBound();
+	
 }

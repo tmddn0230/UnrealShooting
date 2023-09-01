@@ -6,6 +6,20 @@
 #include "AIController.h"
 #include "MetaAIController.generated.h"
 
+
+DECLARE_DELEGATE(FChangeStateDele);
+
+UENUM(BlueprintType)
+enum class EMetaNPCState : uint8
+{
+	None,
+	Idle,
+	Chase,
+	Attack,
+	Die
+};
+
+
 /**
  * 
  */
@@ -22,6 +36,12 @@ public:
 	void StopAI();
 
 	
+	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = "State")
+	EMetaNPCState NPCState;
+
+	TMap<EMetaNPCState, FChangeStateDele> DelegateMap;
+
+
 protected:
 	virtual void OnPossess(APawn* InPawn) override;
 
@@ -34,7 +54,20 @@ private:
 	UPROPERTY()
 	TObjectPtr<class UBehaviorTree> BTAsset;
 
-	
+	UFUNCTION()
+	void SetNPCIdle();
 
+	UFUNCTION()
+	void SetNPCChase();
+
+	UFUNCTION()
+	void SetNPCAttack();
+
+	UFUNCTION()
+	void SetNPCDie();
+
+
+	UFUNCTION()
+	void ChangeState	(EMetaNPCState state);
 
 };
