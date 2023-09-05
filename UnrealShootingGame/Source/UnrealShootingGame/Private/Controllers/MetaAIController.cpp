@@ -74,18 +74,22 @@ void AMetaAIController::OnPossess(APawn* InPawn)
 
 void AMetaAIController::SetNPCIdle()
 {
+	GEngine->AddOnScreenDebugMessage(-1, 3.0f, FColor::Yellow, TEXT("Idle"));
 }
 
 void AMetaAIController::SetNPCChase()
 {
+	GEngine->AddOnScreenDebugMessage(-1, 3.0f, FColor::Yellow, TEXT("Chase"));
 }
 
 void AMetaAIController::SetNPCAttack()
 {
+	GEngine->AddOnScreenDebugMessage(-1, 3.0f, FColor::Yellow, TEXT("Attack"));
 }
 
 void AMetaAIController::SetNPCDie()
 {
+	GEngine->AddOnScreenDebugMessage(-1, 3.0f, FColor::Yellow, TEXT("Die"));
 }
 
 void AMetaAIController::ChangeState(EMetaNPCState state)
