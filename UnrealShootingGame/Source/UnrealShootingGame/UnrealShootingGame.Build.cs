@@ -8,6 +8,7 @@ public class UnrealShootingGame : ModuleRules
 	{
 		PCHUsage = PCHUsageMode.UseExplicitOrSharedPCHs;
 
-		PublicDependencyModuleNames.AddRange(new string[] { "Core", "CoreUObject", "Engine", "InputCore", "HeadMountedDisplay", "EnhancedInput", "AIModule" });
+		PublicDependencyModuleNames.AddRange(new string[] { "Core", "CoreUObject", "Engine", "InputCore", "HeadMountedDisplay", "EnhancedInput", "AIModule" , "OculusXRHMD",
+			"OculusXRInput", "OculusXRMR", "OculusXROpenXRHMD", "OculusXRAnchors", "OculusXRScene" , "OculusXRMovement", "OculusXREyeTracker", "OculusXREditor", "OculusXRPassthrough" });
 	}
 }
